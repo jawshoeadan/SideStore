@@ -6,3 +6,4 @@
 #import "ALTAppPatcher.h"
 
 #include "fragmentzip.h"
+#include "AuthKit.h"

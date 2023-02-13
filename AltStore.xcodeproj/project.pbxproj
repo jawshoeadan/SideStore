@@ -501,6 +501,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		03B863312999D61C008D2769 /* AuthKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthKit.h; sourceTree = "<group>"; };
 		19104DA92909BC7100C49C7B /* em_proxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = em_proxy.h; sourceTree = "<group>"; };
 		19104DB22909C06C00C49C7B /* libEmotionalDamage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEmotionalDamage.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		19104DB42909C06D00C49C7B /* EmotionalDamage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalDamage.swift; sourceTree = "<group>"; };
@@ -1624,6 +1625,7 @@
 			isa = PBXGroup;
 			children = (
 				BFD247782284B9A700981D42 /* LaunchScreen.storyboard */,
+				03B863312999D61C008D2769 /* AuthKit.h */,
 				BFD2477B2284B9A700981D42 /* Info.plist */,
 				BF1E314722A060F300370A3C /* AltStore-Bridging-Header.h */,
 			);

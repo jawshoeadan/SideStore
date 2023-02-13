@@ -12,6 +12,7 @@ import AltStoreCore
 import AltSign
 import Roxas
 
+
 @objc(FetchAnisetteDataOperation)
 final class FetchAnisetteDataOperation: ResultOperation<ALTAnisetteData>
 {
@@ -20,6 +21,7 @@ final class FetchAnisetteDataOperation: ResultOperation<ALTAnisetteData>
     init(context: OperationContext)
     {
         self.context = context
+        dlopen("/System/Library/PrivateFrameworks/AuthKit.framework/AuthKit", RTLD_NOW);
     }
     
     override func main()
@@ -39,6 +41,26 @@ final class FetchAnisetteDataOperation: ResultOperation<ALTAnisetteData>
             guard let data = data, error == nil else { return }
             
             do {
+                var request = URLRequest(url: URL(string: "https://developerservices2.apple.com/services/QH65B2/listTeams.action?clientId=XABBG36SBA")!)
+                      request.httpMethod = "POST"
+                let akAppleIDSession = unsafeBitCast(NSClassFromString("AKAppleIDSession")!, to: AKAppleIDSession.Type.self)
+                       let akDevice = unsafeBitCast(NSClassFromString("AKDevice")!, to: AKDevice.Type.self)
+                       
+                       let session = akAppleIDSession.init(identifier: "com.apple.gs.xcode.auth")
+                let headers =  session!.appleIDHeaders(forRequest: request)
+                print(headers)
+                
+                
+                       
+                   //    let device = akDevice.current
+                   //    let date = self.dateFormatter.date(from: headers["X-Apple-I-Client-Time"] ?? "") ?? Date()
+                       
+//                       var localUserID = UserDefaults.standard.localUserID
+//                       if localUserID == nil
+//                       {
+//                           localUserID = UUID().uuidString
+//                           UserDefaults.standard.localUserID = localUserID
+//                       }
                 // make sure this JSON is in the format we expect
                 // convert data to json
                 if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: String] {
