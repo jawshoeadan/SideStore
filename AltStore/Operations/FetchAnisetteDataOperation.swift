@@ -41,6 +41,7 @@ final class FetchAnisetteDataOperation: ResultOperation<ALTAnisetteData>
             guard let data = data, error == nil else { return }
             
             do {
+                
                 var request = URLRequest(url: URL(string: "https://developerservices2.apple.com/services/QH65B2/listTeams.action?clientId=XABBG36SBA")!)
                       request.httpMethod = "POST"
                 let akAppleIDSession = unsafeBitCast(NSClassFromString("AKAppleIDSession")!, to: AKAppleIDSession.Type.self)

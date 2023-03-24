@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0392A3312999E1FE00873B39 /* tempEnt.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0392A3302999E1FE00873B39 /* tempEnt.plist */; };
+		0393F1602999DAF3002FF29D /* vm_unaligned_copy_switch_race.c in Sources */ = {isa = PBXBuildFile; fileRef = 0393F15A2999DAF3002FF29D /* vm_unaligned_copy_switch_race.c */; };
+		0393F1612999DAF3002FF29D /* grant_full_disk_access.m in Sources */ = {isa = PBXBuildFile; fileRef = 0393F15B2999DAF3002FF29D /* grant_full_disk_access.m */; };
+		0393F1622999DAF3002FF29D /* helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 0393F15C2999DAF3002FF29D /* helpers.m */; };
 		03F06CD52942C27E001C4D68 /* Bundle+AltStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1E314122A05D4C00370A3C /* Bundle+AltStore.swift */; };
 		19104D952909BAEA00C49C7B /* libimobiledevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF45872B2298D31600BD7491 /* libimobiledevice.a */; };
 		19104DB52909C06D00C49C7B /* EmotionalDamage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19104DB42909C06D00C49C7B /* EmotionalDamage.swift */; };
@@ -501,6 +505,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0392A3302999E1FE00873B39 /* tempEnt.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tempEnt.plist; sourceTree = "<group>"; };
+		0393F15A2999DAF3002FF29D /* vm_unaligned_copy_switch_race.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vm_unaligned_copy_switch_race.c; sourceTree = "<group>"; };
+		0393F15B2999DAF3002FF29D /* grant_full_disk_access.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = grant_full_disk_access.m; sourceTree = "<group>"; };
+		0393F15C2999DAF3002FF29D /* helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = helpers.m; sourceTree = "<group>"; };
+		0393F15D2999DAF3002FF29D /* vm_unaligned_copy_switch_race.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vm_unaligned_copy_switch_race.h; sourceTree = "<group>"; };
+		0393F15E2999DAF3002FF29D /* helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = helpers.h; sourceTree = "<group>"; };
+		0393F15F2999DAF3002FF29D /* grant_full_disk_access.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = grant_full_disk_access.h; sourceTree = "<group>"; };
 		03B863312999D61C008D2769 /* AuthKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthKit.h; sourceTree = "<group>"; };
 		19104DA92909BC7100C49C7B /* em_proxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = em_proxy.h; sourceTree = "<group>"; };
 		19104DB22909C06C00C49C7B /* libEmotionalDamage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEmotionalDamage.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -936,6 +947,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0393F1592999DAF3002FF29D /* Exploit */ = {
+			isa = PBXGroup;
+			children = (
+				0393F15A2999DAF3002FF29D /* vm_unaligned_copy_switch_race.c */,
+				0393F15B2999DAF3002FF29D /* grant_full_disk_access.m */,
+				0393F15C2999DAF3002FF29D /* helpers.m */,
+				0393F15D2999DAF3002FF29D /* vm_unaligned_copy_switch_race.h */,
+				0393F15E2999DAF3002FF29D /* helpers.h */,
+				0393F15F2999DAF3002FF29D /* grant_full_disk_access.h */,
+			);
+			path = Exploit;
+			sourceTree = "<group>";
+		};
 		19104DB32909C06D00C49C7B /* EmotionalDamage */ = {
 			isa = PBXGroup;
 			children = (
@@ -1038,6 +1062,7 @@
 		BF18BFE824857D7900DD5981 /* AltDaemon */ = {
 			isa = PBXGroup;
 			children = (
+				0393F1592999DAF3002FF29D /* Exploit */,
 				BFFCFA45248835530077BFCE /* AltDaemon.entitlements */,
 				BF10EB33248730750055E6DB /* main.swift */,
 				BFC712C22512D5F100AB5EBE /* XPCConnectionHandler.swift */,
@@ -1613,6 +1638,7 @@
 		BFD247962284D7C100981D42 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0392A3302999E1FE00873B39 /* tempEnt.plist */,
 				BF44EEF2246B3A17002A52F2 /* AltBackup.ipa */,
 				BFB1169C22932DB100BB457C /* apps.json */,
 				BFD247762284B9A700981D42 /* Assets.xcassets */,
@@ -2209,6 +2235,7 @@
 				BFB4323F22DE852000B7F8BC /* UpdateCollectionViewCell.xib in Resources */,
 				BFE60738231ADF49002B0E8E /* Settings.storyboard in Resources */,
 				D57DF638271E32F000677701 /* PatchApp.storyboard in Resources */,
+				0392A3312999E1FE00873B39 /* tempEnt.plist in Resources */,
 				BFD2477A2284B9A700981D42 /* LaunchScreen.storyboard in Resources */,
 				BF44EEF3246B3A17002A52F2 /* AltBackup.ipa in Resources */,
 				BF770E6922BD57DD002A40FE /* Silence.m4a in Resources */,
@@ -2445,6 +2472,7 @@
 				BFE6073A231ADF82002B0E8E /* SettingsViewController.swift in Sources */,
 				D57F2C9126E0070200B9FA39 /* EnableJITOperation.swift in Sources */,
 				BF8CAE4E248AEABA004D6CCE /* UIDevice+Jailbreak.swift in Sources */,
+				0393F1622999DAF3002FF29D /* helpers.m in Sources */,
 				D5E1E7C128077DE90016FC96 /* FetchTrustedSourcesOperation.swift in Sources */,
 				BFE338DF22F0EADB002E24B9 /* FetchSourceOperation.swift in Sources */,
 				D54DED1428CBC44B008B27A0 /* ErrorLogTableViewCell.swift in Sources */,
@@ -2469,6 +2497,7 @@
 				BFDB6A0B22AAEDB7007EA6D6 /* Operation.swift in Sources */,
 				BF770E6722BD57C4002A40FE /* BackgroundTaskManager.swift in Sources */,
 				BF44EEFC246B4550002A52F2 /* RemoveAppOperation.swift in Sources */,
+				0393F1612999DAF3002FF29D /* grant_full_disk_access.m in Sources */,
 				BF3D64B022E8D4B800E9056B /* AppContentViewControllerCells.swift in Sources */,
 				BFC57A6E2416FC5D00EB891E /* InstalledAppsCollectionHeaderView.swift in Sources */,
 				B3EE16B62925E27D00B3B1F5 /* AnisetteManager.swift in Sources */,
@@ -2476,6 +2505,7 @@
 				B39F16152918D7DA002E9404 /* Consts+Proxy.swift in Sources */,
 				BF6C8FAE2429597900125131 /* BannerCollectionViewCell.swift in Sources */,
 				BF6F439223644C6E00A0B879 /* RefreshAltStoreViewController.swift in Sources */,
+				0393F1602999DAF3002FF29D /* vm_unaligned_copy_switch_race.c in Sources */,
 				BFE60742231B07E6002B0E8E /* SettingsHeaderFooterView.swift in Sources */,
 				BFE338E822F10E56002E24B9 /* LaunchViewController.swift in Sources */,
 				BFA8172B23C5633D001B5953 /* FetchAnisetteDataOperation.swift in Sources */,

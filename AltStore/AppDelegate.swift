@@ -71,6 +71,9 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("Started DatabaseManager.")
             }
         }
+        grant_full_disk_access() { error in
+                   print(error?.localizedDescription as Any)
+               }
         
         AnalyticsManager.shared.start()
         
